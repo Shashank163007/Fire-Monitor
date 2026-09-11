@@ -50,6 +50,11 @@ body {
   display: none !important;
 }
 
+/* Watermark-Free Tactical Dark Map Tiles Filter */
+.tactical-dark-tiles {
+  filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(110%) !important;
+}
+
 /* Leaflet DivIcon Reset */
 .tactical-marker {
   background: transparent !important;

@@ -7,6 +7,7 @@ import { TargetDrawer } from '../components/dashboard/TargetDrawer';
 import { AlertTicker } from '../components/dashboard/AlertTicker';
 import { MOCK_THERMAL_TARGETS } from '../lib/mock-data';
 import { ThermalTarget, MapLayerOptions, AnomalyType, QuickStats } from '../lib/types';
+import { classifyAnomaly } from '../lib/classifier';
 import { ChevronLeft, ChevronRight, Crosshair } from 'lucide-react';
 
 export default function CommandCenterDashboard() {
@@ -29,14 +30,12 @@ export default function CommandCenterDashboard() {
     async function syncAndLoadData() {
       setIsSyncing(true);
       try {
-        // Trigger API telemetry sync
         const syncRes = await fetch('/api/firms/sync', { method: 'POST' });
         if (syncRes.ok) {
           const syncData = await syncRes.json();
           if (syncData.anomalies && syncData.anomalies.length > 0) {
             setTargets(syncData.anomalies);
             setSyncSourceLabel(syncData.sourceLabel || "ORBITAL CACHE // VIIRS-SNPP REPLAY");
-            // Set initial selected target
             const defaultTarget = syncData.anomalies.find((t: ThermalTarget) => t.type === 'CRITICAL_SPIKE') || syncData.anomalies[0];
             setSelectedTarget(defaultTarget);
           }
@@ -103,6 +102,46 @@ export default function CommandCenterDashboard() {
     }
   };
 
+  // Re-classify target dynamically when OSM Overpass boundary verification completes
+  const handleOsmVerified = (targetId: string, osmData: any) => {
+    setTargets(prev => 
+      prev.map(t => {
+        if (t.id !== targetId) return t;
+
+        // Recalculate AI classification probabilities with OSM spatial signal
+        const reclassified = classifyAnomaly({
+          frpMW: t.frpMW,
+          brightTi4K: t.brightnessTempK,
+          brightTi5K: t.brightTi5 || (t.brightnessTempK - 120),
+          distanceToIndustrialMeters: osmData.distanceMeters,
+          isIndustrialOverlap: osmData.overlap,
+          dominantLandCover: osmData.dominantLandCover,
+          dayNight: t.dayNight || 'NIGHT_PASS',
+          confidence: t.confidence,
+        });
+
+        const updated: ThermalTarget = {
+          ...t,
+          osmOverlap: osmData.overlap,
+          nearestFacilityName: osmData.facilityName,
+          distanceToFacilityMeters: osmData.distanceMeters,
+          facilityType: osmData.facilityType || t.facilityType,
+          type: reclassified.primaryType,
+          classification: reclassified.classificationTag,
+          classificationProbs: reclassified.probabilities,
+          riskScore: reclassified.riskScore,
+          defensePriority: reclassified.defensePriority,
+        };
+
+        if (selectedTarget?.id === targetId) {
+          setSelectedTarget(updated);
+        }
+
+        return updated;
+      })
+    );
+  };
+
   const handleDispatchDrone = (targetId: string) => {
     console.log(`[NTRO RECON] Dispatched tactical satellite recon drone to ${targetId}`);
   };
@@ -167,6 +206,7 @@ export default function CommandCenterDashboard() {
               target={selectedTarget}
               onClose={() => setIsDrawerOpen(false)}
               onDispatchDrone={handleDispatchDrone}
+              onOsmVerified={handleOsmVerified}
             />
           </div>
         )}

@@ -1,0 +1,3192 @@
+[
+  {
+    "id": "TRG-JAM-01",
+    "name": "Jamnagar Petroleum Refinery Complex",
+    "facilityType": "Petrochemical & Crude Oil Processing",
+    "state": "Gujarat",
+    "coordinates": [
+      22.4707,
+      70.0577
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE",
+    "sensorId": "VIIRS_VNP14IMGTDL",
+    "brightnessTempK": 512.4,
+    "brightTi4": 512.4,
+    "brightTi5": 340.2,
+    "brightTempC": 239.3,
+    "frpMW": 185.4,
+    "confidence": 99,
+    "osmOverlap": true,
+    "lastDetected": "2026-09-11 23:45:12 UTC",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "DELTA-1",
+    "riskScore": 88,
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY",
+    "description": "World's largest oil refinery complex. Continuous high-volume hydrocracker and coker flaring signature monitored across 365-day satellite baseline.",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 508,
+        "frpMW": 180,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 510,
+        "frpMW": 182,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 514,
+        "frpMW": 188,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 511,
+        "frpMW": 184,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 513,
+        "frpMW": 186,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 512,
+        "frpMW": 185,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 512.4,
+        "frpMW": 185.4,
+        "isMockHistory": true
+      }
+    ]
+  },
+  {
+    "id": "TRG-BHI-02",
+    "name": "Bhilai Integrated Steel Plant",
+    "facilityType": "Metallurgical & Blast Furnace",
+    "state": "Chhattisgarh",
+    "coordinates": [
+      21.1938,
+      81.3509
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "PERSISTENT BLAST FURNACE SIGNATURE",
+    "sensorId": "VIIRS_VNP14IMGTDL",
+    "brightnessTempK": 488.7,
+    "brightTi4": 488.7,
+    "brightTi5": 332.1,
+    "brightTempC": 215.6,
+    "frpMW": 142.1,
+    "confidence": 96,
+    "osmOverlap": true,
+    "lastDetected": "2026-09-11 23:30:04 UTC",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 78,
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY",
+    "description": "Major primary rail and heavy steel producer. Continuous thermal emissions originating from coke oven batteries and converter vessels.",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 482,
+        "frpMW": 138,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 485,
+        "frpMW": 140,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 486,
+        "frpMW": 141,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 490,
+        "frpMW": 145,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 487,
+        "frpMW": 141,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 488,
+        "frpMW": 142,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 488.7,
+        "frpMW": 142.1,
+        "isMockHistory": true
+      }
+    ]
+  },
+  {
+    "id": "TRG-PAN-03",
+    "name": "Panipat Petrochemical Complex",
+    "facilityType": "Naphtha Cracker & Chemical Refinery",
+    "state": "Haryana",
+    "coordinates": [
+      29.3909,
+      76.9637
+    ],
+    "type": "CRITICAL_SPIKE",
+    "classification": "ABNORMAL REFINERY SPIKE (+42%)",
+    "sensorId": "VIIRS_VNP14IMGTDL",
+    "brightnessTempK": 564.8,
+    "brightTi4": 564.8,
+    "brightTi5": 365.4,
+    "brightTempC": 291.7,
+    "frpMW": 342.6,
+    "confidence": 98,
+    "osmOverlap": true,
+    "lastDetected": "2026-09-11 23:51:30 UTC",
+    "status": "ACTIVE_ALERT",
+    "defensePriority": "DELTA-1",
+    "riskScore": 97,
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY",
+    "description": "CRITICAL ANOMALY: Thermal intensity spiked by +42% above 90-day baseline in olefin cracker zone. Immediate drone recon recommended.",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 420,
+        "frpMW": 120,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 422,
+        "frpMW": 122,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 418,
+        "frpMW": 119,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 425,
+        "frpMW": 126,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 440,
+        "frpMW": 160,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 510,
+        "frpMW": 260,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 564.8,
+        "frpMW": 342.6,
+        "isMockHistory": true
+      }
+    ]
+  },
+  {
+    "id": "TRG-BAN-04",
+    "name": "Bandhavgarh Tiger Reserve Forest Corridor",
+    "facilityType": "Protected Dense Canopy Forestry",
+    "state": "Madhya Pradesh",
+    "coordinates": [
+      23.7019,
+      81.0252
+    ],
+    "type": "BIOMASS_FIRE",
+    "classification": "NATURAL BIOMASS WILDFIRE",
+    "sensorId": "MODIS_MYD14",
+    "brightnessTempK": 395.2,
+    "brightTi4": 395.2,
+    "brightTi5": 308.1,
+    "brightTempC": 122.1,
+    "frpMW": 88.3,
+    "confidence": 94,
+    "osmOverlap": false,
+    "lastDetected": "2026-09-11 22:15:00 UTC",
+    "status": "UNDER_RECON",
+    "defensePriority": "ALPHA-2",
+    "riskScore": 65,
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY",
+    "description": "Rapidly spreading canopy surface fire detected across 1.4 km front line. Zero OSM industrial footprint detected. Forest department dispatched.",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 300,
+        "frpMW": 2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 302,
+        "frpMW": 3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 305,
+        "frpMW": 5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 310,
+        "frpMW": 12,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 345,
+        "frpMW": 45,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 380,
+        "frpMW": 72,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 395.2,
+        "frpMW": 88.3,
+        "isMockHistory": true
+      }
+    ]
+  },
+  {
+    "id": "TRG-PUN-05",
+    "name": "Punjab Agricultural Belt (Sangrur District)",
+    "facilityType": "Agro-Paddy Crop Residue Zone",
+    "state": "Punjab",
+    "coordinates": [
+      30.2458,
+      75.8421
+    ],
+    "type": "AGRICULTURAL_STUBBLE",
+    "classification": "UNVERIFIED STUBBLE BURNING CLUSTER",
+    "sensorId": "SLSTR_SENTINEL3",
+    "brightnessTempK": 362.1,
+    "brightTi4": 362.1,
+    "brightTi5": 301,
+    "brightTempC": 89,
+    "frpMW": 34.5,
+    "confidence": 78,
+    "osmOverlap": false,
+    "lastDetected": "2026-09-11 21:05:44 UTC",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 42,
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY",
+    "description": "Low-temperature thermal cluster scattered over farm parcels. Signature aligns with seasonal post-harvest paddy residue open burning.",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 315,
+        "frpMW": 10,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 320,
+        "frpMW": 12,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 330,
+        "frpMW": 18,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 345,
+        "frpMW": 24,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 350,
+        "frpMW": 28,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 358,
+        "frpMW": 31,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 362.1,
+        "frpMW": 34.5,
+        "isMockHistory": true
+      }
+    ]
+  },
+  {
+    "id": "TRG-VNR-01",
+    "name": "Jamnagar Petroleum & Petrochemical Complex",
+    "facilityType": "petroleum_refinery",
+    "state": "Gujarat",
+    "coordinates": [
+      22.4707,
+      70.0577
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 512.4,
+    "brightTi4": 512.4,
+    "brightTi5": 340.2,
+    "brightTempC": 239.3,
+    "frpMW": 185.4,
+    "confidence": 96,
+    "osmOverlap": true,
+    "nearestFacilityName": "Jamnagar Petroleum & Petrochemical Complex",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 23:45:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 79,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 185.4 MW, Temp: 512.4 K (239.3 °C). Infrastructure match: Jamnagar Petroleum & Petrochemical Complex (petroleum_refinery, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 515.7,
+        "frpMW": 190.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 519.9,
+        "frpMW": 196.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 510.2,
+        "frpMW": 182,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 504.6,
+        "frpMW": 173.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 513.5,
+        "frpMW": 187.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 520.4,
+        "frpMW": 197.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 512.4,
+        "frpMW": 185.4,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-02",
+    "name": "Bhilai Integrated Steel Plant",
+    "facilityType": "metallurgical_plant",
+    "state": "Chhattisgarh",
+    "coordinates": [
+      21.1938,
+      81.3509
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 488.7,
+    "brightTi4": 488.7,
+    "brightTi5": 332.1,
+    "brightTempC": 215.6,
+    "frpMW": 142.1,
+    "confidence": 96,
+    "osmOverlap": true,
+    "nearestFacilityName": "Bhilai Integrated Steel Plant",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 23:30:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 77,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 142.1 MW, Temp: 488.7 K (215.6 °C). Infrastructure match: Bhilai Integrated Steel Plant (metallurgical_plant, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 492,
+        "frpMW": 147,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 496.2,
+        "frpMW": 153.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 486.5,
+        "frpMW": 138.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 480.9,
+        "frpMW": 130.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 489.8,
+        "frpMW": 143.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 496.7,
+        "frpMW": 154.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 488.7,
+        "frpMW": 142.1,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-03",
+    "name": "Panipat Petrochemical Complex",
+    "facilityType": "chemical_refinery",
+    "state": "Haryana",
+    "coordinates": [
+      29.3909,
+      76.9637
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 564.8,
+    "brightTi4": 564.8,
+    "brightTi5": 365.4,
+    "brightTempC": 291.6,
+    "frpMW": 342.6,
+    "confidence": 96,
+    "osmOverlap": true,
+    "nearestFacilityName": "Panipat Petrochemical Complex",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 23:51:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "ACTIVE_ALERT",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 87,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 342.6 MW, Temp: 564.8 K (291.6 °C). Infrastructure match: Panipat Petrochemical Complex (chemical_refinery, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 568.1,
+        "frpMW": 347.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 572.3,
+        "frpMW": 353.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 562.6,
+        "frpMW": 339.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 557,
+        "frpMW": 330.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 565.9,
+        "frpMW": 344.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 572.8,
+        "frpMW": 354.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 564.8,
+        "frpMW": 342.6,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-04",
+    "name": "Bandhavgarh Tiger Reserve Forest Corridor (North)",
+    "facilityType": "national_park",
+    "state": "Madhya Pradesh",
+    "coordinates": [
+      23.7019,
+      81.0252
+    ],
+    "type": "BIOMASS_FIRE",
+    "classification": "NATURAL BIOMASS FIRE (FOREST CANOPY)",
+    "sensorId": "VIIRS_VNP14IMGTDL",
+    "brightnessTempK": 395.2,
+    "brightTi4": 395.2,
+    "brightTi5": 308.1,
+    "brightTempC": 122.1,
+    "frpMW": 88.3,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Bandhavgarh Tiger Reserve Forest Corridor (North)",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 22:15:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "ALPHA-2",
+    "riskScore": 81,
+    "description": "Satellite detection via VIIRS_VNP14IMGTDL. FRP: 88.3 MW, Temp: 395.2 K (122.1 °C). Infrastructure match: Bandhavgarh Tiger Reserve Forest Corridor (North) (national_park, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 398.5,
+        "frpMW": 93.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 402.7,
+        "frpMW": 99.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 393,
+        "frpMW": 84.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 387.4,
+        "frpMW": 76.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 396.3,
+        "frpMW": 90,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 403.2,
+        "frpMW": 100.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 395.2,
+        "frpMW": 88.3,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "wildfire": 0.9,
+      "biomass_burning": 0.05,
+      "industrial_flare": 0.02,
+      "abnormal_spike": 0.02,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-05",
+    "name": "Punjab Agricultural Belt (Sangrur)",
+    "facilityType": "paddy_agricultural_belt",
+    "state": "Punjab",
+    "coordinates": [
+      30.2458,
+      75.8421
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "MODIS_MYD14",
+    "brightnessTempK": 362.1,
+    "brightTi4": 362.1,
+    "brightTi5": 301,
+    "brightTempC": 89,
+    "frpMW": 34.5,
+    "confidence": 78,
+    "osmOverlap": false,
+    "nearestFacilityName": "Punjab Agricultural Belt (Sangrur)",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 21:05:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 72,
+    "description": "Satellite detection via MODIS_MYD14. FRP: 34.5 MW, Temp: 362.1 K (89 °C). Infrastructure match: Punjab Agricultural Belt (Sangrur) (paddy_agricultural_belt, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 365.4,
+        "frpMW": 39.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 369.6,
+        "frpMW": 45.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 359.9,
+        "frpMW": 31.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 354.3,
+        "frpMW": 22.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 363.2,
+        "frpMW": 36.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 370.1,
+        "frpMW": 46.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 362.1,
+        "frpMW": 34.5,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-06",
+    "name": "Visakhapatnam Naval & Metallurgical Hub",
+    "facilityType": "shipyard_metallurgical",
+    "state": "Andhra Pradesh",
+    "coordinates": [
+      17.6868,
+      83.2185
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 472.3,
+    "brightTi4": 472.3,
+    "brightTi5": 328,
+    "brightTempC": 199.2,
+    "frpMW": 115.8,
+    "confidence": 96,
+    "osmOverlap": true,
+    "nearestFacilityName": "Visakhapatnam Naval & Metallurgical Hub",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 23:10:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 76,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 115.8 MW, Temp: 472.3 K (199.2 °C). Infrastructure match: Visakhapatnam Naval & Metallurgical Hub (shipyard_metallurgical, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 475.6,
+        "frpMW": 120.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 479.8,
+        "frpMW": 127.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 470.1,
+        "frpMW": 112.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 464.5,
+        "frpMW": 104.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 473.4,
+        "frpMW": 117.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 480.3,
+        "frpMW": 127.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 472.3,
+        "frpMW": 115.8,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-07",
+    "name": "Mumbai High Offshore Rig North",
+    "facilityType": "offshore_drilling_platform",
+    "state": "Arabian Sea (Offshore MH)",
+    "coordinates": [
+      19.4167,
+      71.3333
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 535,
+    "brightTi4": 535,
+    "brightTi5": 352.4,
+    "brightTempC": 261.9,
+    "frpMW": 210.4,
+    "confidence": 96,
+    "osmOverlap": true,
+    "nearestFacilityName": "Mumbai High Offshore Rig North",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 23:55:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 81,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 210.4 MW, Temp: 535 K (261.9 °C). Infrastructure match: Mumbai High Offshore Rig North (offshore_drilling_platform, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 538.3,
+        "frpMW": 215.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 542.5,
+        "frpMW": 221.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 532.8,
+        "frpMW": 207,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 527.2,
+        "frpMW": 198.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 536.1,
+        "frpMW": 212.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 543,
+        "frpMW": 222.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 535,
+        "frpMW": 210.4,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-08",
+    "name": "Rourkela Steel Plant Complex",
+    "facilityType": "steel_plant",
+    "state": "Odisha",
+    "coordinates": [
+      22.2604,
+      84.8536
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 468.1,
+    "brightTi4": 468.1,
+    "brightTi5": 325.6,
+    "brightTempC": 195,
+    "frpMW": 128.9,
+    "confidence": 96,
+    "osmOverlap": true,
+    "nearestFacilityName": "Rourkela Steel Plant Complex",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 22:48:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 76,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 128.9 MW, Temp: 468.1 K (195 °C). Infrastructure match: Rourkela Steel Plant Complex (steel_plant, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 471.4,
+        "frpMW": 133.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 475.6,
+        "frpMW": 140.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 465.9,
+        "frpMW": 125.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 460.3,
+        "frpMW": 117.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 469.2,
+        "frpMW": 130.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 476.1,
+        "frpMW": 140.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 468.1,
+        "frpMW": 128.9,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-09",
+    "name": "Digboi Oil Refinery & Oilfields",
+    "facilityType": "petroleum_refinery",
+    "state": "Assam",
+    "coordinates": [
+      27.38,
+      95.62
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_VNP14IMGTDL",
+    "brightnessTempK": 445,
+    "brightTi4": 445,
+    "brightTi5": 318.9,
+    "brightTempC": 171.9,
+    "frpMW": 92.4,
+    "confidence": 78,
+    "osmOverlap": true,
+    "nearestFacilityName": "Digboi Oil Refinery & Oilfields",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 21:30:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 75,
+    "description": "Satellite detection via VIIRS_VNP14IMGTDL. FRP: 92.4 MW, Temp: 445 K (171.9 °C). Infrastructure match: Digboi Oil Refinery & Oilfields (petroleum_refinery, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 448.3,
+        "frpMW": 97.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 452.5,
+        "frpMW": 103.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 442.8,
+        "frpMW": 89,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 437.2,
+        "frpMW": 80.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 446.1,
+        "frpMW": 94.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 453,
+        "frpMW": 104.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 445,
+        "frpMW": 92.4,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-10",
+    "name": "Neyveli Lignite Thermal Power Station",
+    "facilityType": "power_plant",
+    "state": "Tamil Nadu",
+    "coordinates": [
+      11.6008,
+      79.4862
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 540.3,
+    "brightTi4": 540.3,
+    "brightTi5": 358.1,
+    "brightTempC": 267.1,
+    "frpMW": 285,
+    "confidence": 96,
+    "osmOverlap": true,
+    "nearestFacilityName": "Neyveli Lignite Thermal Power Station",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 23:40:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "ACTIVE_ALERT",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 84,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 285 MW, Temp: 540.3 K (267.1 °C). Infrastructure match: Neyveli Lignite Thermal Power Station (power_plant, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 543.6,
+        "frpMW": 289.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 547.8,
+        "frpMW": 296.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 538.1,
+        "frpMW": 281.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 532.5,
+        "frpMW": 273.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 541.4,
+        "frpMW": 286.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 548.3,
+        "frpMW": 297,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 540.3,
+        "frpMW": 285,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-11",
+    "name": "Singrauli Super Thermal Energy Hub",
+    "facilityType": "power_plant",
+    "state": "MP / UP Border",
+    "coordinates": [
+      24.2012,
+      82.6719
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 558.9,
+    "brightTi4": 558.9,
+    "brightTi5": 362,
+    "brightTempC": 285.8,
+    "frpMW": 310.2,
+    "confidence": 96,
+    "osmOverlap": true,
+    "nearestFacilityName": "Singrauli Super Thermal Energy Hub",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 23:49:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "ACTIVE_ALERT",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 86,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 310.2 MW, Temp: 558.9 K (285.8 °C). Infrastructure match: Singrauli Super Thermal Energy Hub (power_plant, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 562.2,
+        "frpMW": 315.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 566.4,
+        "frpMW": 321.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 556.7,
+        "frpMW": 306.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 551.1,
+        "frpMW": 298.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 560,
+        "frpMW": 311.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 566.9,
+        "frpMW": 322.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 558.9,
+        "frpMW": 310.2,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-12",
+    "name": "Koyali Refinery Complex Vadodara",
+    "facilityType": "petroleum_refinery",
+    "state": "Gujarat",
+    "coordinates": [
+      22.3789,
+      73.1362
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 495.6,
+    "brightTi4": 495.6,
+    "brightTi5": 334.8,
+    "brightTempC": 222.5,
+    "frpMW": 162,
+    "confidence": 96,
+    "osmOverlap": true,
+    "nearestFacilityName": "Koyali Refinery Complex Vadodara",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 23:02:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 78,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 162 MW, Temp: 495.6 K (222.5 °C). Infrastructure match: Koyali Refinery Complex Vadodara (petroleum_refinery, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 498.9,
+        "frpMW": 166.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 503.1,
+        "frpMW": 173.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 493.4,
+        "frpMW": 158.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 487.8,
+        "frpMW": 150.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 496.7,
+        "frpMW": 163.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 503.6,
+        "frpMW": 174,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 495.6,
+        "frpMW": 162,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-13",
+    "name": "Durgapur Industrial Corridor",
+    "facilityType": "foundry_metallurgical",
+    "state": "West Bengal",
+    "coordinates": [
+      23.5204,
+      87.3119
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 462.4,
+    "brightTi4": 462.4,
+    "brightTi5": 322.7,
+    "brightTempC": 189.3,
+    "frpMW": 108.5,
+    "confidence": 96,
+    "osmOverlap": true,
+    "nearestFacilityName": "Durgapur Industrial Corridor",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 22:20:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 75,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 108.5 MW, Temp: 462.4 K (189.3 °C). Infrastructure match: Durgapur Industrial Corridor (foundry_metallurgical, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 465.7,
+        "frpMW": 113.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 469.9,
+        "frpMW": 119.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 460.2,
+        "frpMW": 105.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 454.6,
+        "frpMW": 96.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 463.5,
+        "frpMW": 110.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 470.4,
+        "frpMW": 120.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 462.4,
+        "frpMW": 108.5,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-14",
+    "name": "Kudankulam Coastal Infrastructure Buffer",
+    "facilityType": "nuclear_cooling_buffer",
+    "state": "Tamil Nadu",
+    "coordinates": [
+      8.1691,
+      77.7126
+    ],
+    "type": "PERSISTENT_FLARE",
+    "classification": "CONFIRMED INDUSTRIAL FLARE (ROUTINE FLARING)",
+    "sensorId": "MODIS_MYD14",
+    "brightnessTempK": 312.4,
+    "brightTi4": 312.4,
+    "brightTi5": 298.5,
+    "brightTempC": 39.3,
+    "frpMW": 15.2,
+    "confidence": 78,
+    "osmOverlap": true,
+    "nearestFacilityName": "Kudankulam Coastal Infrastructure Buffer",
+    "distanceToFacilityMeters": 0,
+    "lastDetected": "2026-09-11 23:58:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "VERIFIED_STABLE",
+    "defensePriority": "BRAVO-1",
+    "riskScore": 71,
+    "description": "Satellite detection via MODIS_MYD14. FRP: 15.2 MW, Temp: 312.4 K (39.3 °C). Infrastructure match: Kudankulam Coastal Infrastructure Buffer (nuclear_cooling_buffer, 0m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 315.7,
+        "frpMW": 20.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 319.9,
+        "frpMW": 26.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 310.2,
+        "frpMW": 11.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 304.6,
+        "frpMW": 3.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 313.5,
+        "frpMW": 16.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 320.4,
+        "frpMW": 27.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 312.4,
+        "frpMW": 15.2,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "industrial_flare": 0.92,
+      "abnormal_spike": 0.05,
+      "biomass_burning": 0.01,
+      "wildfire": 0.01,
+      "unverified": 0.01
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-15",
+    "name": "Unregistered Sector (26.09°N, 71.34°E)",
+    "facilityType": "rural_canopy",
+    "state": "Gujarat",
+    "coordinates": [
+      26.0921,
+      71.3412
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 438.2,
+    "brightTi4": 438.2,
+    "brightTi5": 315.4,
+    "brightTempC": 165.1,
+    "frpMW": 82.1,
+    "confidence": 78,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (26.09°N, 71.34°E)",
+    "distanceToFacilityMeters": 423163,
+    "lastDetected": "2026-09-11 20:45:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 82.1 MW, Temp: 438.2 K (165.1 °C). Infrastructure match: Unregistered Sector (26.09°N, 71.34°E) (rural_canopy, 423163m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 441.5,
+        "frpMW": 87,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 445.7,
+        "frpMW": 93.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 436,
+        "frpMW": 78.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 430.4,
+        "frpMW": 70.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 439.3,
+        "frpMW": 83.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 446.2,
+        "frpMW": 94.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 438.2,
+        "frpMW": 82.1,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-16",
+    "name": "Unregistered Sector (20.95°N, 85.15°E)",
+    "facilityType": "rural_canopy",
+    "state": "Odisha",
+    "coordinates": [
+      20.9517,
+      85.1511
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 482,
+    "brightTi4": 482,
+    "brightTi5": 330.1,
+    "brightTempC": 208.9,
+    "frpMW": 135.4,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (20.95°N, 85.15°E)",
+    "distanceToFacilityMeters": 148735,
+    "lastDetected": "2026-09-11 22:12:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 135.4 MW, Temp: 482 K (208.9 °C). Infrastructure match: Unregistered Sector (20.95°N, 85.15°E) (rural_canopy, 148735m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 485.3,
+        "frpMW": 140.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 489.5,
+        "frpMW": 146.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 479.8,
+        "frpMW": 132,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 474.2,
+        "frpMW": 123.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 483.1,
+        "frpMW": 137.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 490,
+        "frpMW": 147.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 482,
+        "frpMW": 135.4,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-17",
+    "name": "Unregistered Sector (21.83°N, 73.71°E)",
+    "facilityType": "rural_canopy",
+    "state": "Gujarat",
+    "coordinates": [
+      21.8312,
+      73.7121
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 465.8,
+    "brightTi4": 465.8,
+    "brightTi5": 324,
+    "brightTempC": 192.7,
+    "frpMW": 112,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (21.83°N, 73.71°E)",
+    "distanceToFacilityMeters": 85024,
+    "lastDetected": "2026-09-11 21:50:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 112 MW, Temp: 465.8 K (192.7 °C). Infrastructure match: Unregistered Sector (21.83°N, 73.71°E) (rural_canopy, 85024m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 469.1,
+        "frpMW": 116.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 473.3,
+        "frpMW": 123.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 463.6,
+        "frpMW": 108.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 458,
+        "frpMW": 100.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 466.9,
+        "frpMW": 113.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 473.8,
+        "frpMW": 124,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 465.8,
+        "frpMW": 112,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-18",
+    "name": "Unregistered Sector (30.90°N, 75.86°E)",
+    "facilityType": "rural_canopy",
+    "state": "Punjab",
+    "coordinates": [
+      30.901,
+      75.8573
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "MODIS_MYD14",
+    "brightnessTempK": 370.4,
+    "brightTi4": 370.4,
+    "brightTi5": 304.2,
+    "brightTempC": 97.3,
+    "frpMW": 42.1,
+    "confidence": 45,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (30.90°N, 75.86°E)",
+    "distanceToFacilityMeters": 72869,
+    "lastDetected": "2026-09-11 21:15:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via MODIS_MYD14. FRP: 42.1 MW, Temp: 370.4 K (97.3 °C). Infrastructure match: Unregistered Sector (30.90°N, 75.86°E) (rural_canopy, 72869m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 373.7,
+        "frpMW": 47,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 377.9,
+        "frpMW": 53.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 368.2,
+        "frpMW": 38.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 362.6,
+        "frpMW": 30.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 371.5,
+        "frpMW": 43.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 378.4,
+        "frpMW": 54.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 370.4,
+        "frpMW": 42.1,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-19",
+    "name": "Unregistered Sector (21.47°N, 83.98°E)",
+    "facilityType": "rural_canopy",
+    "state": "Odisha",
+    "coordinates": [
+      21.4682,
+      83.9812
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 476.9,
+    "brightTi4": 476.9,
+    "brightTi5": 327.4,
+    "brightTempC": 203.8,
+    "frpMW": 124.6,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (21.47°N, 83.98°E)",
+    "distanceToFacilityMeters": 125955,
+    "lastDetected": "2026-09-11 22:35:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 124.6 MW, Temp: 476.9 K (203.8 °C). Infrastructure match: Unregistered Sector (21.47°N, 83.98°E) (rural_canopy, 125955m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 480.2,
+        "frpMW": 129.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 484.4,
+        "frpMW": 135.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 474.7,
+        "frpMW": 121.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 469.1,
+        "frpMW": 112.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 478,
+        "frpMW": 126.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 484.9,
+        "frpMW": 136.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 476.9,
+        "frpMW": 124.6,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-20",
+    "name": "Unregistered Sector (28.67°N, 77.45°E)",
+    "facilityType": "rural_canopy",
+    "state": "Haryana",
+    "coordinates": [
+      28.6692,
+      77.4538
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_VNP14IMGTDL",
+    "brightnessTempK": 442.1,
+    "brightTi4": 442.1,
+    "brightTi5": 316.5,
+    "brightTempC": 169,
+    "frpMW": 78.9,
+    "confidence": 78,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (28.67°N, 77.45°E)",
+    "distanceToFacilityMeters": 93330,
+    "lastDetected": "2026-09-11 21:40:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_VNP14IMGTDL. FRP: 78.9 MW, Temp: 442.1 K (169 °C). Infrastructure match: Unregistered Sector (28.67°N, 77.45°E) (rural_canopy, 93330m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 445.4,
+        "frpMW": 83.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 449.6,
+        "frpMW": 90.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 439.9,
+        "frpMW": 75.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 434.3,
+        "frpMW": 67.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 443.2,
+        "frpMW": 80.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 450.1,
+        "frpMW": 90.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 442.1,
+        "frpMW": 78.9,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-21",
+    "name": "Unregistered Sector (23.63°N, 86.95°E)",
+    "facilityType": "rural_canopy",
+    "state": "West Bengal",
+    "coordinates": [
+      23.6345,
+      86.9512
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 489.2,
+    "brightTi4": 489.2,
+    "brightTi5": 331,
+    "brightTempC": 216.1,
+    "frpMW": 145,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (23.63°N, 86.95°E)",
+    "distanceToFacilityMeters": 38888,
+    "lastDetected": "2026-09-11 22:55:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 145 MW, Temp: 489.2 K (216.1 °C). Infrastructure match: Unregistered Sector (23.63°N, 86.95°E) (rural_canopy, 38888m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 492.5,
+        "frpMW": 149.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 496.7,
+        "frpMW": 156.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 487,
+        "frpMW": 141.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 481.4,
+        "frpMW": 133.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 490.3,
+        "frpMW": 146.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 497.2,
+        "frpMW": 157,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 489.2,
+        "frpMW": 145,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-22",
+    "name": "Unregistered Sector (15.36°N, 75.12°E)",
+    "facilityType": "rural_canopy",
+    "state": "Arabian Sea (Offshore MH)",
+    "coordinates": [
+      15.3647,
+      75.124
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "MODIS_MYD14",
+    "brightnessTempK": 425.4,
+    "brightTi4": 425.4,
+    "brightTi5": 310.2,
+    "brightTempC": 152.3,
+    "frpMW": 62,
+    "confidence": 78,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (15.36°N, 75.12°E)",
+    "distanceToFacilityMeters": 603912,
+    "lastDetected": "2026-09-11 20:20:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via MODIS_MYD14. FRP: 62 MW, Temp: 425.4 K (152.3 °C). Infrastructure match: Unregistered Sector (15.36°N, 75.12°E) (rural_canopy, 603912m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 428.7,
+        "frpMW": 66.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 432.9,
+        "frpMW": 73.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 423.2,
+        "frpMW": 58.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 417.6,
+        "frpMW": 50.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 426.5,
+        "frpMW": 63.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 433.4,
+        "frpMW": 74,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 425.4,
+        "frpMW": 62,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-23",
+    "name": "Unregistered Sector (13.08°N, 80.27°E)",
+    "facilityType": "rural_canopy",
+    "state": "Tamil Nadu",
+    "coordinates": [
+      13.0827,
+      80.2707
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 458.1,
+    "brightTi4": 458.1,
+    "brightTi5": 321.4,
+    "brightTempC": 185,
+    "frpMW": 104.2,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (13.08°N, 80.27°E)",
+    "distanceToFacilityMeters": 185509,
+    "lastDetected": "2026-09-11 22:10:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 104.2 MW, Temp: 458.1 K (185 °C). Infrastructure match: Unregistered Sector (13.08°N, 80.27°E) (rural_canopy, 185509m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 461.4,
+        "frpMW": 109.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 465.6,
+        "frpMW": 115.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 455.9,
+        "frpMW": 100.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 450.3,
+        "frpMW": 92.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 459.2,
+        "frpMW": 105.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 466.1,
+        "frpMW": 116.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 458.1,
+        "frpMW": 104.2,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-24",
+    "name": "Unregistered Sector (26.24°N, 73.02°E)",
+    "facilityType": "rural_canopy",
+    "state": "Gujarat",
+    "coordinates": [
+      26.2389,
+      73.0243
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_VNP14IMGTDL",
+    "brightnessTempK": 412.5,
+    "brightTi4": 412.5,
+    "brightTi5": 306.8,
+    "brightTempC": 139.4,
+    "frpMW": 48.5,
+    "confidence": 45,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (26.24°N, 73.02°E)",
+    "distanceToFacilityMeters": 429362,
+    "lastDetected": "2026-09-11 20:10:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_VNP14IMGTDL. FRP: 48.5 MW, Temp: 412.5 K (139.4 °C). Infrastructure match: Unregistered Sector (26.24°N, 73.02°E) (rural_canopy, 429362m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 415.8,
+        "frpMW": 53.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 420,
+        "frpMW": 59.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 410.3,
+        "frpMW": 45.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 404.7,
+        "frpMW": 36.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 413.6,
+        "frpMW": 50.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 420.5,
+        "frpMW": 60.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 412.5,
+        "frpMW": 48.5,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-25",
+    "name": "Unregistered Sector (22.01°N, 82.15°E)",
+    "facilityType": "rural_canopy",
+    "state": "Chhattisgarh",
+    "coordinates": [
+      22.0124,
+      82.1489
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 492,
+    "brightTi4": 492,
+    "brightTi5": 333.1,
+    "brightTempC": 218.9,
+    "frpMW": 156.2,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (22.01°N, 82.15°E)",
+    "distanceToFacilityMeters": 122848,
+    "lastDetected": "2026-09-11 23:15:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 156.2 MW, Temp: 492 K (218.9 °C). Infrastructure match: Unregistered Sector (22.01°N, 82.15°E) (rural_canopy, 122848m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 495.3,
+        "frpMW": 161.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 499.5,
+        "frpMW": 167.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 489.8,
+        "frpMW": 152.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 484.2,
+        "frpMW": 144.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 493.1,
+        "frpMW": 157.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 500,
+        "frpMW": 168.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 492,
+        "frpMW": 156.2,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-26",
+    "name": "Unregistered Sector (27.18°N, 78.01°E)",
+    "facilityType": "rural_canopy",
+    "state": "Haryana",
+    "coordinates": [
+      27.1767,
+      78.0081
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "MODIS_MYD14",
+    "brightnessTempK": 431,
+    "brightTi4": 431,
+    "brightTi5": 312,
+    "brightTempC": 157.9,
+    "frpMW": 71.4,
+    "confidence": 78,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (27.18°N, 78.01°E)",
+    "distanceToFacilityMeters": 266598,
+    "lastDetected": "2026-09-11 21:00:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via MODIS_MYD14. FRP: 71.4 MW, Temp: 431 K (157.9 °C). Infrastructure match: Unregistered Sector (27.18°N, 78.01°E) (rural_canopy, 266598m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 434.3,
+        "frpMW": 76.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 438.5,
+        "frpMW": 82.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 428.8,
+        "frpMW": 68,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 423.2,
+        "frpMW": 59.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 432.1,
+        "frpMW": 73.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 439,
+        "frpMW": 83.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 431,
+        "frpMW": 71.4,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-27",
+    "name": "Unregistered Sector (25.59°N, 85.14°E)",
+    "facilityType": "rural_canopy",
+    "state": "MP / UP Border",
+    "coordinates": [
+      25.5941,
+      85.1376
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 448.9,
+    "brightTi4": 448.9,
+    "brightTi5": 317.8,
+    "brightTempC": 175.8,
+    "frpMW": 89.6,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (25.59°N, 85.14°E)",
+    "distanceToFacilityMeters": 292967,
+    "lastDetected": "2026-09-11 21:25:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 89.6 MW, Temp: 448.9 K (175.8 °C). Infrastructure match: Unregistered Sector (25.59°N, 85.14°E) (rural_canopy, 292967m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 452.2,
+        "frpMW": 94.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 456.4,
+        "frpMW": 100.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 446.7,
+        "frpMW": 86.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 441.1,
+        "frpMW": 77.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 450,
+        "frpMW": 91.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 456.9,
+        "frpMW": 101.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 448.9,
+        "frpMW": 89.6,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-28",
+    "name": "Unregistered Sector (21.77°N, 88.35°E)",
+    "facilityType": "rural_canopy",
+    "state": "West Bengal",
+    "coordinates": [
+      21.7679,
+      88.3476
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "MODIS_MYD14",
+    "brightnessTempK": 418.6,
+    "brightTi4": 418.6,
+    "brightTi5": 308.9,
+    "brightTempC": 145.5,
+    "frpMW": 54.1,
+    "confidence": 45,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (21.77°N, 88.35°E)",
+    "distanceToFacilityMeters": 221967,
+    "lastDetected": "2026-09-11 20:30:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via MODIS_MYD14. FRP: 54.1 MW, Temp: 418.6 K (145.5 °C). Infrastructure match: Unregistered Sector (21.77°N, 88.35°E) (rural_canopy, 221967m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 421.9,
+        "frpMW": 59,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 426.1,
+        "frpMW": 65.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 416.4,
+        "frpMW": 50.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 410.8,
+        "frpMW": 42.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 419.7,
+        "frpMW": 55.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 426.6,
+        "frpMW": 66.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 418.6,
+        "frpMW": 54.1,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-29",
+    "name": "Unregistered Sector (24.59°N, 73.71°E)",
+    "facilityType": "rural_canopy",
+    "state": "Gujarat",
+    "coordinates": [
+      24.5854,
+      73.7125
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_VNP14IMGTDL",
+    "brightnessTempK": 452.3,
+    "brightTi4": 452.3,
+    "brightTi5": 319.4,
+    "brightTempC": 179.2,
+    "frpMW": 96.8,
+    "confidence": 78,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (24.59°N, 73.71°E)",
+    "distanceToFacilityMeters": 252292,
+    "lastDetected": "2026-09-11 21:55:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_VNP14IMGTDL. FRP: 96.8 MW, Temp: 452.3 K (179.2 °C). Infrastructure match: Unregistered Sector (24.59°N, 73.71°E) (rural_canopy, 252292m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 455.6,
+        "frpMW": 101.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 459.8,
+        "frpMW": 108.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 450.1,
+        "frpMW": 93.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 444.5,
+        "frpMW": 85.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 453.4,
+        "frpMW": 98.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 460.3,
+        "frpMW": 108.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 452.3,
+        "frpMW": 96.8,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-30",
+    "name": "Unregistered Sector (19.08°N, 72.88°E)",
+    "facilityType": "rural_canopy",
+    "state": "Arabian Sea (Offshore MH)",
+    "coordinates": [
+      19.076,
+      72.8777
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 481.5,
+    "brightTi4": 481.5,
+    "brightTi5": 329.8,
+    "brightTempC": 208.4,
+    "frpMW": 138.9,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (19.08°N, 72.88°E)",
+    "distanceToFacilityMeters": 166498,
+    "lastDetected": "2026-09-11 22:40:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 138.9 MW, Temp: 481.5 K (208.4 °C). Infrastructure match: Unregistered Sector (19.08°N, 72.88°E) (rural_canopy, 166498m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 484.8,
+        "frpMW": 143.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 489,
+        "frpMW": 150.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 479.3,
+        "frpMW": 135.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 473.7,
+        "frpMW": 127.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 482.6,
+        "frpMW": 140.6,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 489.5,
+        "frpMW": 150.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 481.5,
+        "frpMW": 138.9,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-31",
+    "name": "Unregistered Sector (23.34°N, 85.31°E)",
+    "facilityType": "rural_canopy",
+    "state": "Odisha",
+    "coordinates": [
+      23.3441,
+      85.3096
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 469,
+    "brightTi4": 469,
+    "brightTi5": 324.5,
+    "brightTempC": 195.9,
+    "frpMW": 118.2,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (23.34°N, 85.31°E)",
+    "distanceToFacilityMeters": 129250,
+    "lastDetected": "2026-09-11 22:05:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 118.2 MW, Temp: 469 K (195.9 °C). Infrastructure match: Unregistered Sector (23.34°N, 85.31°E) (rural_canopy, 129250m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 472.3,
+        "frpMW": 123.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 476.5,
+        "frpMW": 129.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 466.8,
+        "frpMW": 114.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 461.2,
+        "frpMW": 106.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 470.1,
+        "frpMW": 119.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 477,
+        "frpMW": 130.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 469,
+        "frpMW": 118.2,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-32",
+    "name": "Unregistered Sector (28.70°N, 77.10°E)",
+    "facilityType": "rural_canopy",
+    "state": "Haryana",
+    "coordinates": [
+      28.7041,
+      77.1025
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_VNP14IMGTDL",
+    "brightnessTempK": 461.2,
+    "brightTi4": 461.2,
+    "brightTi5": 321,
+    "brightTempC": 188.1,
+    "frpMW": 106.4,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (28.70°N, 77.10°E)",
+    "distanceToFacilityMeters": 77551,
+    "lastDetected": "2026-09-11 22:25:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_VNP14IMGTDL. FRP: 106.4 MW, Temp: 461.2 K (188.1 °C). Infrastructure match: Unregistered Sector (28.70°N, 77.10°E) (rural_canopy, 77551m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 464.5,
+        "frpMW": 111.3,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 468.7,
+        "frpMW": 117.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 459,
+        "frpMW": 103,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 453.4,
+        "frpMW": 94.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 462.3,
+        "frpMW": 108.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 469.2,
+        "frpMW": 118.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 461.2,
+        "frpMW": 106.4,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-33",
+    "name": "Unregistered Sector (31.63°N, 74.87°E)",
+    "facilityType": "rural_canopy",
+    "state": "Punjab",
+    "coordinates": [
+      31.634,
+      74.8723
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "MODIS_MYD14",
+    "brightnessTempK": 365.8,
+    "brightTi4": 365.8,
+    "brightTi5": 302.1,
+    "brightTempC": 92.7,
+    "frpMW": 38.2,
+    "confidence": 78,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (31.63°N, 74.87°E)",
+    "distanceToFacilityMeters": 179948,
+    "lastDetected": "2026-09-11 20:50:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via MODIS_MYD14. FRP: 38.2 MW, Temp: 365.8 K (92.7 °C). Infrastructure match: Unregistered Sector (31.63°N, 74.87°E) (rural_canopy, 179948m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 369.1,
+        "frpMW": 43.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 373.3,
+        "frpMW": 49.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 363.6,
+        "frpMW": 34.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 358,
+        "frpMW": 26.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 366.9,
+        "frpMW": 39.9,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 373.8,
+        "frpMW": 50.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 365.8,
+        "frpMW": 38.2,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-34",
+    "name": "Unregistered Sector (20.30°N, 85.82°E)",
+    "facilityType": "rural_canopy",
+    "state": "Odisha",
+    "coordinates": [
+      20.2961,
+      85.8245
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_NRT_NOAA20",
+    "brightnessTempK": 478.4,
+    "brightTi4": 478.4,
+    "brightTi5": 328.7,
+    "brightTempC": 205.3,
+    "frpMW": 129.1,
+    "confidence": 96,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (20.30°N, 85.82°E)",
+    "distanceToFacilityMeters": 240471,
+    "lastDetected": "2026-09-11 22:50:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_NRT_NOAA20. FRP: 129.1 MW, Temp: 478.4 K (205.3 °C). Infrastructure match: Unregistered Sector (20.30°N, 85.82°E) (rural_canopy, 240471m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 481.7,
+        "frpMW": 134,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 485.9,
+        "frpMW": 140.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 476.2,
+        "frpMW": 125.7,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 470.6,
+        "frpMW": 117.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 479.5,
+        "frpMW": 130.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 486.4,
+        "frpMW": 141.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 478.4,
+        "frpMW": 129.1,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  },
+  {
+    "id": "TRG-VNR-35",
+    "name": "Unregistered Sector (12.97°N, 77.59°E)",
+    "facilityType": "rural_canopy",
+    "state": "Tamil Nadu",
+    "coordinates": [
+      12.9716,
+      77.5946
+    ],
+    "type": "THERMAL_TELEMETRY",
+    "classification": "UNVERIFIED THERMAL SIGNATURE",
+    "sensorId": "VIIRS_VNP14IMGTDL",
+    "brightnessTempK": 435.6,
+    "brightTi4": 435.6,
+    "brightTi5": 313.9,
+    "brightTempC": 162.5,
+    "frpMW": 74.5,
+    "confidence": 78,
+    "osmOverlap": false,
+    "nearestFacilityName": "Unregistered Sector (12.97°N, 77.59°E)",
+    "distanceToFacilityMeters": 255870,
+    "lastDetected": "2026-09-11 21:10:00 UTC",
+    "dayNight": "NIGHT_PASS",
+    "status": "UNVERIFIED",
+    "defensePriority": "CHARLIE-3",
+    "riskScore": 40,
+    "description": "Satellite detection via VIIRS_VNP14IMGTDL. FRP: 74.5 MW, Temp: 435.6 K (162.5 °C). Infrastructure match: Unregistered Sector (12.97°N, 77.59°E) (rural_canopy, 255870m).",
+    "history7Days": [
+      {
+        "date": "09-05",
+        "tempK": 438.9,
+        "frpMW": 79.4,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-06",
+        "tempK": 443.1,
+        "frpMW": 85.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-07",
+        "tempK": 433.4,
+        "frpMW": 71.1,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-08",
+        "tempK": 427.8,
+        "frpMW": 62.8,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-09",
+        "tempK": 436.7,
+        "frpMW": 76.2,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-10",
+        "tempK": 443.6,
+        "frpMW": 86.5,
+        "isMockHistory": true
+      },
+      {
+        "date": "09-11",
+        "tempK": 435.6,
+        "frpMW": 74.5,
+        "isMockHistory": true
+      }
+    ],
+    "classificationProbs": {
+      "unverified": 0.7,
+      "biomass_burning": 0.15,
+      "industrial_flare": 0.1,
+      "abnormal_spike": 0.03,
+      "wildfire": 0.02
+    },
+    "isSynthetic": true,
+    "dataSourceLabel": "ORBITAL CACHE // VIIRS-SNPP REPLAY"
+  }
+]

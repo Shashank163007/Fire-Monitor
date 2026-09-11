@@ -10,122 +10,121 @@ export interface FacilityMatch {
   coordinates: [number, number];
   distanceMeters: number;
   isIndustrialOverlap: boolean;
+  dominantLandCover: 'INDUSTRIAL' | 'FOREST' | 'FARMLAND' | 'UNCLASSIFIED';
 }
 
 export const KNOWN_INDIAN_FACILITIES = [
   {
-    name: "Jamnagar Petroleum Refinery Complex",
-    facilityType: "Petrochemical & Crude Oil Processing",
+    name: "Jamnagar Petroleum & Petrochemical Complex",
+    facilityType: "petroleum_refinery",
     state: "Gujarat",
     coordinates: [22.4707, 70.0577] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
+  },
+  {
+    name: "Jamnagar Petrochemical Complex (West Basin)",
+    facilityType: "petroleum_refinery",
+    state: "Gujarat",
+    coordinates: [22.3590, 69.8640] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Bhilai Integrated Steel Plant",
-    facilityType: "Metallurgical & Blast Furnace",
+    facilityType: "metallurgical_plant",
     state: "Chhattisgarh",
     coordinates: [21.1938, 81.3509] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Panipat Petrochemical Complex",
-    facilityType: "Naphtha Cracker & Chemical Refinery",
+    facilityType: "chemical_refinery",
     state: "Haryana",
     coordinates: [29.3909, 76.9637] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Bandhavgarh Tiger Reserve Forest Corridor",
-    facilityType: "Protected Dense Canopy Forestry",
+    facilityType: "national_park",
+    state: "Madhya Pradesh",
+    coordinates: [23.6850, 81.0310] as [number, number],
+    dominantLandCover: 'FOREST' as const,
+  },
+  {
+    name: "Bandhavgarh Tiger Reserve Forest Corridor (North)",
+    facilityType: "national_park",
     state: "Madhya Pradesh",
     coordinates: [23.7019, 81.0252] as [number, number],
+    dominantLandCover: 'FOREST' as const,
   },
   {
     name: "Punjab Agricultural Belt (Sangrur)",
-    facilityType: "Agro-Paddy Crop Residue Zone",
+    facilityType: "paddy_agricultural_belt",
     state: "Punjab",
     coordinates: [30.2458, 75.8421] as [number, number],
+    dominantLandCover: 'FARMLAND' as const,
   },
   {
     name: "Visakhapatnam Naval & Metallurgical Hub",
-    facilityType: "Coastal Heavy Industry & Shipyard",
+    facilityType: "shipyard_metallurgical",
     state: "Andhra Pradesh",
     coordinates: [17.6868, 83.2185] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Mumbai High Offshore Rig North",
-    facilityType: "Offshore Crude Oil Drilling Platform",
+    facilityType: "offshore_drilling_platform",
     state: "Arabian Sea (Offshore MH)",
     coordinates: [19.4167, 71.3333] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Rourkela Steel Plant Complex",
-    facilityType: "Primary Metallurgical Works",
+    facilityType: "steel_plant",
     state: "Odisha",
     coordinates: [22.2604, 84.8536] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Digboi Oil Refinery & Oilfields",
-    facilityType: "Legacy Hydrocarbon Refining",
+    facilityType: "petroleum_refinery",
     state: "Assam",
     coordinates: [27.3800, 95.6200] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Neyveli Lignite Thermal Power Station",
-    facilityType: "Lignite Coal Fired Power Plant",
+    facilityType: "power_plant",
     state: "Tamil Nadu",
     coordinates: [11.6008, 79.4862] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Singrauli Super Thermal Energy Hub",
-    facilityType: "Mega Coal-Fired Thermal Complex",
+    facilityType: "power_plant",
     state: "MP / UP Border",
     coordinates: [24.2012, 82.6719] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Koyali Refinery Complex Vadodara",
-    facilityType: "Hydrocarbon Refining Facility",
+    facilityType: "petroleum_refinery",
     state: "Gujarat",
     coordinates: [22.3789, 73.1362] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Durgapur Industrial Corridor",
-    facilityType: "Heavy Mechanical & Foundry",
+    facilityType: "foundry_metallurgical",
     state: "West Bengal",
     coordinates: [23.5204, 87.3119] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   },
   {
     name: "Kudankulam Coastal Infrastructure Buffer",
-    facilityType: "Nuclear Clean Thermal Cooling Outlet",
+    facilityType: "nuclear_cooling_buffer",
     state: "Tamil Nadu",
     coordinates: [8.1691, 77.7126] as [number, number],
-  },
-  {
-    name: "Barmer Oil & Gas Field Basin",
-    facilityType: "Onshore Hydrocarbon Extraction Zone",
-    state: "Rajasthan",
-    coordinates: [26.0921, 71.3412] as [number, number],
-  },
-  {
-    name: "Angul Aluminium & Steel Hub",
-    facilityType: "Alumina Smelter & Power Complex",
-    state: "Odisha",
-    coordinates: [20.9517, 85.1511] as [number, number],
-  },
-  {
-    name: "Dahej Chemical & Petrochemical Estate",
-    facilityType: "PCPIR Industrial Park & Flare Stack Zone",
-    state: "Gujarat",
-    coordinates: [21.8312, 73.7121] as [number, number],
-  },
-  {
-    name: "Jharsuguda Industrial Corridor",
-    facilityType: "Thermal Power & Metal Smelter",
-    state: "Odisha",
-    coordinates: [21.4682, 83.9812] as [number, number],
-  },
-  {
-    name: "Dhanbad Coal Mining Belt",
-    facilityType: "Open-Cast Coking Coal Fields",
-    state: "Jharkhand",
-    coordinates: [23.6345, 86.9512] as [number, number],
+    dominantLandCover: 'INDUSTRIAL' as const,
   }
 ];
 
@@ -138,7 +137,7 @@ export function calculateHaversineDistance(
   lat2: number,
   lng2: number
 ): number {
-  const R = 6371000; // Radius of Earth in meters
+  const R = 6371000;
   const dLat = ((lat2 - lat1) * Math.PI) / 180;
   const dLng = ((lng2 - lng1) * Math.PI) / 180;
   const a =
@@ -152,7 +151,7 @@ export function calculateHaversineDistance(
 }
 
 /**
- * Cross-references a thermal detection coordinate against known Indian industrial sites.
+ * Cross-references a thermal detection coordinate against known Indian industrial/forest sites.
  */
 export function findNearestIndustrialFacility(
   lat: number,
@@ -170,14 +169,15 @@ export function findNearestIndustrialFacility(
     }
   }
 
-  const isOverlap = minDistance <= thresholdMeters;
+  const isOverlap = minDistance <= thresholdMeters && closest.dominantLandCover === 'INDUSTRIAL';
 
   return {
-    name: isOverlap ? closest.name : `Unregistered Sector (${lat.toFixed(2)}°N, ${lng.toFixed(2)}°E)`,
-    facilityType: isOverlap ? closest.facilityType : "Non-Industrial Canopy / Rural Sector",
+    name: minDistance <= thresholdMeters ? closest.name : `Unregistered Sector (${lat.toFixed(2)}°N, ${lng.toFixed(2)}°E)`,
+    facilityType: minDistance <= thresholdMeters ? closest.facilityType : "rural_canopy",
     state: closest.state,
     coordinates: closest.coordinates,
     distanceMeters: minDistance,
     isIndustrialOverlap: isOverlap,
+    dominantLandCover: minDistance <= thresholdMeters ? closest.dominantLandCover : 'UNCLASSIFIED',
   };
 }

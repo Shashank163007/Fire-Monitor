@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ThermalTarget, MapLayerOptions } from '../../lib/types';
 import { 
   ZoomIn, ZoomOut, Compass, RotateCcw, Layers, 
-  Flame, Trees, Cpu, Eye, EyeOff, ShieldAlert, Radio
+  Flame, Trees, Cpu
 } from 'lucide-react';
 
 interface TacticalMapProps {
@@ -40,10 +40,8 @@ export const TacticalMap: React.FC<TacticalMapProps> = ({
 
     let L: any;
     const initMap = async () => {
-      // Import leaflet dynamically for SSR compatibility
       L = (await import('leaflet')).default;
       
-      // Fix default Leaflet icon paths
       delete L.Icon.Default.prototype._getIconUrl;
       L.Icon.Default.mergeOptions({
         iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
@@ -59,10 +57,11 @@ export const TacticalMap: React.FC<TacticalMapProps> = ({
           attributionControl: false,
         });
 
-        // CartoDB Dark Matter Tile Layer (NO API Key required)
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        // 100% Watermark-Free Tactical Dark Matter Base Layer using OpenStreetMap inverted tiles
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
-          subdomains: 'abcd',
+          className: 'tactical-dark-tiles',
+          attribution: '',
         }).addTo(map);
 
         map.on('zoomend', () => {
@@ -99,17 +98,13 @@ export const TacticalMap: React.FC<TacticalMapProps> = ({
       const isSelected = selectedTarget?.id === target.id;
       
       let markerColor = '#06b6d4'; // Cyan default
-      let glowClass = 'pulse-cyan';
 
       if (target.type === 'CRITICAL_SPIKE') {
         markerColor = '#ef4444';
-        glowClass = 'pulse-red';
       } else if (target.type === 'PERSISTENT_FLARE') {
         markerColor = '#f59e0b';
-        glowClass = 'pulse-amber';
       } else if (target.type === 'BIOMASS_FIRE') {
         markerColor = '#10b981';
-        glowClass = 'pulse-green';
       }
 
       // Create Custom Tactical DivIcon
@@ -159,11 +154,10 @@ export const TacticalMap: React.FC<TacticalMapProps> = ({
     const L = require('leaflet');
     const map = leafletMapRef.current;
 
-    // FIRMS Thermal Hotspots Layer Overlay (Simulated Grid Clusters)
+    // FIRMS Thermal Hotspots Layer Overlay
     if (layers.firmsHotspots) {
       if (!overlayLayersRef.current.firms) {
         const firmsGroup = L.layerGroup();
-        // Generate tactical hotspot grid points around India
         targets.forEach(t => {
           for (let i = 0; i < 4; i++) {
             const offsetLat = (Math.random() - 0.5) * 0.15;
@@ -362,9 +356,9 @@ export const TacticalMap: React.FC<TacticalMapProps> = ({
           <span>ZOOM: <span className="text-cyan-300 font-bold">{currentZoom}</span></span>
         </div>
         <div className="h-3 w-[1px] bg-slate-800" />
-        <div>PROJECTION: <span className="text-slate-200">EPSG:3857 (DARK MATTER)</span></div>
+        <div>PROJECTION: <span className="text-slate-200">EPSG:3857 (WATERMARK-FREE)</span></div>
         <div className="h-3 w-[1px] bg-slate-800 hidden md:block" />
-        <div className="hidden md:block">BASE: <span className="text-emerald-400">CARTO BASMAPS</span></div>
+        <div className="hidden md:block">BASE: <span className="text-emerald-400">OPENSTREETMAP TACTICAL DARK</span></div>
       </div>
     </div>
   );

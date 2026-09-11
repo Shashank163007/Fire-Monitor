@@ -24,7 +24,7 @@ export function normalizeFirmsRecord(
   
   const frpMW = typeof raw.frp === 'string' ? parseFloat(raw.frp) : raw.frp;
   
-  // Parse confidence: "l" -> 30, "n" -> 65, "h" -> 95
+  // Parse confidence
   let confidence = 85;
   if (typeof raw.confidence === 'string') {
     if (raw.confidence.toLowerCase() === 'h') confidence = 96;
@@ -45,19 +45,6 @@ export function normalizeFirmsRecord(
   // Spatial landcover cross-reference
   const landcoverMatch = findNearestIndustrialFacility(lat, lng, 5000);
 
-  // AI Probabilistic Classifier
-  const classification = classifyAnomaly({
-    frpMW,
-    brightTi4K,
-    brightTi5K,
-    distanceToIndustrialMeters: landcoverMatch.distanceMeters,
-    isIndustrialOverlap: landcoverMatch.isIndustrialOverlap,
-    dayNight,
-    confidence,
-  });
-
-  const brightTempC = Number((brightTi4K - 273.15).toFixed(1));
-
   // Acquisition timestamp
   const dateStr = raw.acq_date || new Date().toISOString().substring(0, 10);
   const timeStr = raw.acq_time ? `${raw.acq_time.padStart(4, '0').substring(0, 2)}:${raw.acq_time.padStart(4, '0').substring(2, 4)}` : '23:45';
@@ -66,6 +53,21 @@ export function normalizeFirmsRecord(
   // Deterministic 7-day history with explicit isMockHistory provenance flag
   const history7Days: ThermalHistoryPoint[] = generate7DayBaselineHistory(dateStr, brightTi4K, frpMW);
 
+  // AI Probabilistic Classifier calibrated with history and landcover
+  const classification = classifyAnomaly({
+    frpMW,
+    brightTi4K,
+    brightTi5K,
+    distanceToIndustrialMeters: landcoverMatch.distanceMeters,
+    isIndustrialOverlap: landcoverMatch.isIndustrialOverlap,
+    facilityType: landcoverMatch.facilityType,
+    dominantLandCover: landcoverMatch.dominantLandCover,
+    dayNight,
+    confidence,
+    history7Days,
+  });
+
+  const brightTempC = Number((brightTi4K - 273.15).toFixed(1));
   const id = `TRG-VNR-${String(index + 1).padStart(2, '0')}`;
 
   return {
@@ -91,7 +93,7 @@ export function normalizeFirmsRecord(
     status: frpMW > 250 ? 'ACTIVE_ALERT' : (landcoverMatch.isIndustrialOverlap ? 'VERIFIED_STABLE' : 'UNVERIFIED'),
     defensePriority: classification.defensePriority,
     riskScore: classification.riskScore,
-    description: `Satellite detection via ${sensorId}. FRP: ${frpMW} MW, Temp: ${brightTi4K} K (${brightTempC} °C). Distance to nearest infrastructure: ${landcoverMatch.distanceMeters}m (${landcoverMatch.facilityType}).`,
+    description: `Satellite detection via ${sensorId}. FRP: ${frpMW} MW, Temp: ${brightTi4K} K (${brightTempC} °C). Infrastructure match: ${landcoverMatch.name} (${landcoverMatch.facilityType}, ${landcoverMatch.distanceMeters}m).`,
     history7Days,
     classificationProbs: classification.probabilities,
     isSynthetic: !isLiveDownlink,
@@ -103,7 +105,6 @@ export function normalizeFirmsRecord(
 
 /**
  * Generates a deterministic 7-day thermal intensity history.
- * Every point carries explicit `isMockHistory: true` provenance flag.
  */
 function generate7DayBaselineHistory(
   baseDateStr: string,
@@ -118,7 +119,6 @@ function generate7DayBaselineHistory(
     d.setDate(d.getDate() - i);
     const mmdd = `${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
-    // Create realistic variation relative to current reading
     const tempVariance = i === 0 ? 0 : Math.sin(i * 1.5) * 8;
     const frpVariance = i === 0 ? 0 : Math.sin(i * 1.5) * 12;
 
