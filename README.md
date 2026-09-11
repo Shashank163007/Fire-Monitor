@@ -135,3 +135,28 @@ Get-FileHash -Algorithm SHA256 -LiteralPath data\processed\expanded_region_june_
 The first command may acquire missing buffered responses through the free Overpass API; each query has at most three attempts. Prior unbuffered caches are insufficient. Subsequent valid responses are reused, and `--offline` preserves saved failures without new requests. Raw responses and per-cell manifests are under `data/raw/osm/expanded_region/`. Failed cores are context-unavailable, never assumed empty. The real-cache tests block HTTP dispatch and socket connections while reproducing output bytes.
 
 Read the [expanded-region readiness report](outputs/expanded_region_readiness.md) and [classifier feature policy](docs/classifier_feature_policy.md). Only industrial/wildfire proxies with valid measurements, context and complete history enter the training-candidate CSV. Cropland remains audit-only. Direct proxy-source features require weak-label-agreement reporting and a later ablation using only the eight independent FIRMS-derived features. If the nine readiness checks fail, use the pre-agreed rule-based fallback and do not start another region search. No classifier, final prediction file or feature-importance file is created.
+
+## Stage 4: binary Random Forest weak-label agreement
+
+The earlier sections describe their historical stages. Stage 4 validates the accepted 674-row June audit and 387 training candidates, compares contextual and FIRMS-only Random Forest pipelines using spatial group-aware folds, and applies the fixed operational gate to the FIRMS-only results. This is weak-label agreement, not verified fire-cause performance. No network or new dependency installation is required.
+
+Run the complete suite, then the pipeline twice in the VS Code PowerShell terminal:
+
+```powershell
+Set-Location 'D:\academic_weapon\vscode\SIH26162\fire-monitor'
+.\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider
+.\.venv\Scripts\python.exe -B src\train_classifier.py
+Get-FileHash -Algorithm SHA256 -LiteralPath data\processed\classified_hotspots.csv, outputs\classifier_metrics.json, outputs\feature_importances.json
+.\.venv\Scripts\python.exe -B src\train_classifier.py
+Get-FileHash -Algorithm SHA256 -LiteralPath data\processed\classified_hotspots.csv, outputs\classifier_metrics.json, outputs\feature_importances.json
+```
+
+New artifacts include both pipelines in `models/`, the 674-row `classified_hotspots.csv`, separate model importances, full spatial OOF metrics, two confusion matrices and the evaluation report. A failed FIRMS-only gate keeps rules operational and leaves every class_probability null. Non-eligible rows remain unknown; risk_score and risk_band are always null in Stage 4. The contextual model cannot pass the gate on its own. Earlier outputs and contracts are preserved.
+
+Load a saved pipeline from the project root after reviewing the [model card](docs/model_card.md):
+
+```powershell
+.\.venv\Scripts\python.exe -B -c "import joblib; model = joblib.load('models/firms_only_random_forest.joblib'); print(model.named_steps['forest'].get_params())"
+```
+
+Use `feature_frame` from `src.train_classifier` to construct the exact model-specific input columns. Read the operational decision in [classifier evaluation](outputs/classifier_evaluation.md) before using either saved model. See [Stage 4 code review](docs/stage4_code_review.md) for preservation, atomic-write guarantees and validation. This stage does not implement risk scoring, alerts, a frontend or Stage 5.
