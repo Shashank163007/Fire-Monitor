@@ -115,3 +115,23 @@ Get-FileHash -Algorithm SHA256 -LiteralPath data\processed\region_21_22_72_73_ex
 The `--extended` flag is required for this stage. It validates local WorldCover files without rewriting the manifest or downloading anything, and permits no OSM network fallback. It writes only the three new extended output files. Earlier-stage outputs remain unchanged. Missing/invalid raster data stops clearly; unavailable OSM context is retained as unknown_context_unavailable and cannot establish a training label. The Stage 3.5 integration tests block Requests and socket connections while regenerating artifacts in memory and checking output bytes against the saved files.
 
 Read [Stage 3.5 methodology correction](docs/stage3_5_methodology_correction.md) and [extended-window decision](outputs/extended_window_decision.md). The 443-row window fails the fixed two-class readiness checks: only 11 wildfire candidates, 97.07% industrial dominance and 90.91% of wildfire candidates in June. **The region/window cannot be locked, and no training should begin under these thresholds.** Cropland remains audit-only; no classifier or final predictions are created.
+
+## Stage 3.6: final expanded-region readiness attempt
+
+Evaluate June 1-30, 2026 in the half-open region 21 <= latitude < 24, 72 <= longitude < 75. Nine one-degree cores use separately cached OSM queries with a 0.02-degree buffer; all distances use the merged deduplicated geometries. The existing N21E072 WorldCover tile is validated and reused. This stage creates proxy-labelled training candidates and a readiness report, without training a classifier.
+
+Run these exact commands in the VS Code PowerShell terminal using the existing environment:
+
+```powershell
+Set-Location 'D:\academic_weapon\vscode\SIH26162\fire-monitor'
+.\.venv\Scripts\python.exe -B src\evaluate_expanded_region.py
+.\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider
+Get-FileHash -Algorithm SHA256 -LiteralPath data\processed\expanded_region_june_audit.csv, data\processed\expanded_region_training_candidates.csv, outputs\expanded_region_osm_coverage.csv, outputs\expanded_region_readiness.md, data\raw\osm\expanded_region\manifest.json
+.\.venv\Scripts\python.exe -B src\evaluate_expanded_region.py --offline
+.\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider
+Get-FileHash -Algorithm SHA256 -LiteralPath data\processed\expanded_region_june_audit.csv, data\processed\expanded_region_training_candidates.csv, outputs\expanded_region_osm_coverage.csv, outputs\expanded_region_readiness.md, data\raw\osm\expanded_region\manifest.json
+```
+
+The first command may acquire missing buffered responses through the free Overpass API; each query has at most three attempts. Prior unbuffered caches are insufficient. Subsequent valid responses are reused, and `--offline` preserves saved failures without new requests. Raw responses and per-cell manifests are under `data/raw/osm/expanded_region/`. Failed cores are context-unavailable, never assumed empty. The real-cache tests block HTTP dispatch and socket connections while reproducing output bytes.
+
+Read the [expanded-region readiness report](outputs/expanded_region_readiness.md) and [classifier feature policy](docs/classifier_feature_policy.md). Only industrial/wildfire proxies with valid measurements, context and complete history enter the training-candidate CSV. Cropland remains audit-only. Direct proxy-source features require weak-label-agreement reporting and a later ablation using only the eight independent FIRMS-derived features. If the nine readiness checks fail, use the pre-agreed rule-based fallback and do not start another region search. No classifier, final prediction file or feature-importance file is created.
