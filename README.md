@@ -160,3 +160,56 @@ Load a saved pipeline from the project root after reviewing the [model card](doc
 ```
 
 Use `feature_frame` from `src.train_classifier` to construct the exact model-specific input columns. Read the operational decision in [classifier evaluation](outputs/classifier_evaluation.md) before using either saved model. See [Stage 4 code review](docs/stage4_code_review.md) for preservation, atomic-write guarantees and validation. This stage does not implement risk scoring, alerts, a frontend or Stage 5.
+
+## Stage 5: deterministic human-review priority
+
+Stage 4 remains a rule-based weak-label fallback. Stage 5 scores all 674 detections using only FRP, existing persistence, sensor confidence and day/night. It does not use either saved model or change classes/probabilities. The historical Stage 4 commands above are not part of Stage 5 execution; do not rerun training to generate review scores.
+
+This deterministic score ranks FIRMS thermal detections for human review. It is not a probability, verified severity measurement, fire-cause determination or emergency-dispatch recommendation.
+
+Use the existing environment in the Windows VS Code PowerShell terminal; no dependency installation is needed:
+
+```powershell
+Set-Location 'D:\academic_weapon\vscode\SIH26162\fire-monitor'
+.\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider
+.\.venv\Scripts\python.exe -B src\build_risk_scores.py
+$stage5FirstHashes = Get-FileHash -Algorithm SHA256 -LiteralPath data\processed\classified_hotspots.csv, outputs\hotspot_risk_audit.csv, outputs\high_priority_alerts.csv, outputs\daily_alert_summary.csv, outputs\risk_score_distribution.csv
+.\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider
+.\.venv\Scripts\python.exe -B src\build_risk_scores.py
+$stage5SecondHashes = Get-FileHash -Algorithm SHA256 -LiteralPath data\processed\classified_hotspots.csv, outputs\hotspot_risk_audit.csv, outputs\high_priority_alerts.csv, outputs\daily_alert_summary.csv, outputs\risk_score_distribution.csv
+$stage5SecondHashes | Format-Table -AutoSize
+Compare-Object $stage5FirstHashes $stage5SecondHashes -Property Path, Hash
+```
+
+An empty Compare-Object result confirms matching hashes. Both score runs enforce a network/model-import guard and log the original Stage 4 input hash. A cached run accepts scores only when clearing the two risk fields reconstructs that exact original hash and every stored score/band matches a fresh calculation. Never clear or repair those fields manually to bypass a failed check. All source strings and row positions remain unchanged. The full retained suite exercises isolated Stage 4 model fixtures; the Stage 5 scoring process does not load saved models or train any model.
+
+Outputs: the existing classified CSV gains risk_score/risk_band, and new files provide [all component explanations](outputs/hotspot_risk_audit.csv), a [local high/critical review queue](outputs/high_priority_alerts.csv), [daily spatial summaries](outputs/daily_alert_summary.csv), [class/band distributions](outputs/risk_score_distribution.csv), [methodology](outputs/risk_scoring_methodology.md) and [validation with SHA-256 hashes](outputs/risk_scoring_validation.md). No alerts are transmitted. Summary cells are not incident boundaries. Read the [scoring specification](docs/risk_scoring_specification.md) for exact formulas, mappings, round-half-even precision, bands, provenance, grouping, limitations and safe presentation language.
+
+Only classified_hotspots.csv and this README may change from Stage 4. Earlier raw/cached inputs, models, scripts, tests, reports and all other processed files remain preserved. No frontend or Stage 6 work is included.
+
+### Completed Stage 5 validation record
+
+Both complete-suite runs passed **250 tests**, including 80 new Stage 5 tests, with zero network attempts. The 2,256 warnings per run are the preserved Rasterio/Affine deprecation warnings and the intentional Stage 4 single-class metric warning. The suite was run before scoring and again after the first score run, using the command above through `pytest.main` with Requests HTTP dispatch and socket connections blocked. An initial sandbox-only test attempt could not create five pytest temporary directories; local execution permission resolved that environment error without code changes. Earlier Stage 4 tests still fit/serialize isolated test fixtures; neither saved production model was loaded or retrained by Stage 5.
+
+Both pipeline executions used exactly `.\.venv\Scripts\python.exe -B src\build_risk_scores.py`. Run 1 authenticated the original input; run 2 authenticated the already-scored input and checked every score against fresh calculation. Both reported zero network attempts and zero model-import attempts. All five required CSVs and both generated reports were byte-identical across the runs. The original Stage 4 hash was verified as `b5d0840a9e8f0865fc6d1972c23e21b98a8294efcf5e5453cb5b443b3314373f`. Clearing only the two risk fields on the final output reproduces it exactly, verifying every source value and row position, including class and null probability.
+
+An independent calculation with exact rational fractions matched all 674 scores. Decimal half-even rounding avoids binary-floating-point tie artifacts: FRP 22.55 MW, persistence 1, nominal confidence and daytime produce exactly 23.275 before rounding, hence 23.28. No formula, breakpoint or threshold was adjusted after observing the data.
+
+| Rule-based context | Critical | High | Moderate | Low | Total |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| industrial | 0 | 10 | 148 | 150 | 308 |
+| wildfire | 0 | 0 | 0 | 79 | 79 |
+| unknown | 0 | 0 | 1 | 286 | 287 |
+| overall | 0 | 10 | 149 | 515 | 674 |
+
+The 10 high-priority detections form six date/grid groups. None is critical. Observed confidence is l=96, n=575, h=3; day/night is D=510, N=164. Invalid or missing FRP, persistence, confidence and day/night counts are all zero. High priority is concentrated in persistent thermal detections with industrial rule context; that is not evidence of industrial emergencies. A low score on a wildfire-context candidate is not evidence of safety.
+
+| Required artifact | SHA-256, run 1 = run 2 |
+| --- | --- |
+| classified_hotspots.csv | `29031a9049f145574c507fba40e6d94b3760052e2d199287d3934d2733b614cf` |
+| hotspot_risk_audit.csv | `17ebd97e8b40d584df095b654ffd5746bbe8a66532e8f350562806482bcc8dd7` |
+| high_priority_alerts.csv | `6b4fc985fc0456c6af941904bd946c5fe9b6c6169d96f4d2f2c5d3f6bac732be` |
+| daily_alert_summary.csv | `d919a3c31475502790b5b8c8328d22b7c6853ca513de96d02ef8f8595e56c02a` |
+| risk_score_distribution.csv | `2396498a177c248639ab3cd354c41e069ba4401de60f27dbfbbfa4466439d15d` |
+
+Preservation comparison against the 106 pre-existing files found **104 byte-identical protected files** and only the authorized classified CSV and README changes. requirements.txt is unchanged. Exactly nine Stage 5 files were created: src/build_risk_scores.py, tests/test_risk_scoring.py, docs/risk_scoring_specification.md, outputs/hotspot_risk_audit.csv, outputs/high_priority_alerts.csv, outputs/daily_alert_summary.csv, outputs/risk_score_distribution.csv, outputs/risk_scoring_methodology.md and outputs/risk_scoring_validation.md. No external alerts, frontend, new model artifacts or Stage 6 work were created.
