@@ -213,3 +213,62 @@ The 10 high-priority detections form six date/grid groups. None is critical. Obs
 | risk_score_distribution.csv | `2396498a177c248639ab3cd354c41e069ba4401de60f27dbfbbfa4466439d15d` |
 
 Preservation comparison against the 106 pre-existing files found **104 byte-identical protected files** and only the authorized classified CSV and README changes. requirements.txt is unchanged. Exactly nine Stage 5 files were created: src/build_risk_scores.py, tests/test_risk_scoring.py, docs/risk_scoring_specification.md, outputs/hotspot_risk_audit.csv, outputs/high_priority_alerts.csv, outputs/daily_alert_summary.csv, outputs/risk_score_distribution.csv, outputs/risk_scoring_methodology.md and outputs/risk_scoring_validation.md. No external alerts, frontend, new model artifacts or Stage 6 work were created.
+
+## Stage 6: read-only FastAPI and tracked demo snapshot
+
+The API serves the accepted Stage 5 values unchanged: 674 detections, 308 industrial / 79 wildfire / 287 unknown, risk bands 0 critical / 10 high / 149 moderate / 515 low, ten review alerts and six daily spatial summaries. All probabilities remain null and both classifiers remain evaluation artifacts. This stage adds no visual frontend.
+
+This API serves a retrospective demonstration dataset. Classes are rule-based weak-label categories, and risk scores rank detections for human review. They are not verified fire causes, probabilities, severity measurements or emergency-dispatch recommendations.
+
+Runtime uses only the backend package and three intentionally tracked files under backend/data. It does not need ignored pipeline CSVs, raw data, OSM caches, WorldCover rasters, src/ or model files. A clone with dependencies installed can start the API directly; **do not run export on a clone lacking the five original Stage 5 CSVs**. Missing or inconsistent snapshot data stops startup clearly.
+
+From the VS Code PowerShell terminal, install the required dependencies if needed. This command is dependency setup; export and API runtime never download data:
+
+```powershell
+Set-Location 'D:\academic_weapon\vscode\SIH26162\fire-monitor'
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+For an offline environment with a supplied wheel directory, use `--no-index --find-links 'C:\path\to\local-wheels'`. Stage 6 validation used compatible packages already installed locally in Miniconda, copied byte-for-byte into this environment without network access. New direct requirements are FastAPI, Uvicorn, HTTPX for testing, and Pydantic v2 for the frozen response contracts. No database/server platform or cloud SDK was added.
+
+On this original data-engineering checkout, export and validate the snapshot:
+
+```powershell
+.\.venv\Scripts\python.exe -B src\export_demo_data.py
+$stage6FirstHashes = Get-FileHash -Algorithm SHA256 -LiteralPath backend\data\demo_hotspots.json, backend\data\demo_alert_groups.json, backend\data\demo_manifest.json
+.\.venv\Scripts\python.exe -B src\export_demo_data.py
+$stage6SecondHashes = Get-FileHash -Algorithm SHA256 -LiteralPath backend\data\demo_hotspots.json, backend\data\demo_alert_groups.json, backend\data\demo_manifest.json
+Compare-Object $stage6FirstHashes $stage6SecondHashes -Property Path, Hash
+.\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider
+.\.venv\Scripts\python.exe -B -m pytest -q -p no:cacheprovider
+```
+
+An empty Compare-Object result means identical hashes. The complete historical test suite requires the preserved original pipeline inputs; on a clone containing only tracked files, `tests\test_api.py` validates the backend independently. See [API contract](docs/api_contract.md) and [Stage 6 validation](docs/stage6_validation.md) for exact schemas, checks, filter boundaries and measured results.
+
+Start the local API in one terminal:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m uvicorn backend.app:app --reload --host 127.0.0.1 --port 8000
+```
+
+`--reload` is development-only. Omit it for a stable local demo. In a second PowerShell terminal, open Swagger documentation or exercise the API:
+
+```powershell
+Start-Process 'http://127.0.0.1:8000/docs'
+Invoke-RestMethod 'http://127.0.0.1:8000/api/v1/health'
+Invoke-RestMethod 'http://127.0.0.1:8000/api/v1/meta'
+Invoke-RestMethod 'http://127.0.0.1:8000/api/v1/hotspots?predicted_class=industrial&risk_band=high&limit=5&offset=0'
+Invoke-RestMethod 'http://127.0.0.1:8000/api/v1/hotspots?date_from=2026-06-12&date_to=2026-06-12&bbox=72.6,21.1,72.65,21.15'
+Invoke-RestMethod 'http://127.0.0.1:8000/api/v1/hotspots.geojson?day_night=N&min_risk_score=55'
+Invoke-RestMethod 'http://127.0.0.1:8000/api/v1/alerts?limit=5'
+Invoke-RestMethod 'http://127.0.0.1:8000/api/v1/alert-groups?date_from=2026-06-12&date_to=2026-06-12'
+Invoke-RestMethod 'http://127.0.0.1:8000/api/v1/risk-distribution'
+```
+
+The API and OpenAPI JSON work offline. FastAPI's standard browser Swagger UI references CDN assets and may require those assets already cached; Stage 6 validation makes no browser/CDN requests. Queries return deterministic results, strict 422 validation errors and consistent API error envelopes. Default pagination is 100, maximum 500. High-priority alerts are a local review queue, not transmitted messages.
+
+CORS defaults to only `http://localhost:5173` and `http://127.0.0.1:5173`, with credentials disabled and GET/OPTIONS only. Optional `FIRE_MONITOR_CORS_ORIGINS` appends a comma-separated explicit HTTP(S) origin allowlist; wildcards and origins containing paths or credentials are rejected. No environment file or secret is required.
+
+Only this README and requirements.txt needed earlier-file edits for Stage 6. The existing .gitignore already permits the three backend/data JSON files; raw and processed directories remain ignored. Export preserves all Stage 1-5 source data, outputs, scripts, tests, reports and models. No score, category or explanation is recalculated, and no frontend or Stage 7 work is included.
+
+A narrowly scoped new backend/data/.gitattributes keeps exactly the three snapshot JSON files at LF line endings, even with Windows Git autocrlf enabled. This preserves manifest checksum validity after checkout/clone; it does not unignore or alter earlier data files.
