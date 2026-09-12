@@ -1,4 +1,4 @@
-# Fire Monitor: data foundation and Stage 2 features
+# SatBurn: data foundation and Stage 2 features
 
 Python 3.11+; local batch processing. The briefing's classification approach and scope are locked. Stage 1 profiles and normalizes the supplied NOAA-20 VIIRS files. Stage 2 builds observed-date persistence and real Overpass industrial context. No frontend, trained classifier, or final predictions are created.
 

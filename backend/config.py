@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
-API_TITLE = "Fire Monitor Retrospective Review API"
+API_TITLE = "SatBurn Retrospective Review API"
 API_VERSION = "1.0.0"
 CLASSIFICATION_SOURCE = "rule_based_weak_label_fallback"
 DISCLAIMER = "This API serves a retrospective demonstration dataset. Classes are rule-based weak-label categories, and risk scores rank detections for human review. They are not verified fire causes, probabilities, severity measurements or emergency-dispatch recommendations."

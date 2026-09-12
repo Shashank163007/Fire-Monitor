@@ -26,7 +26,7 @@ Export computes and validates all bytes first, then atomically replaces each of 
 
 ## Endpoints
 
-API prefix: `/api/v1`. The explicit application title is `Fire Monitor Retrospective Review API`, version `1.0.0`. `/openapi.json`, `/docs` and `/redoc` remain enabled.
+API prefix: `/api/v1`. The explicit application title is `SatBurn Retrospective Review API`, version `1.0.0`. `/openapi.json`, `/docs` and `/redoc` remain enabled.
 
 | GET endpoint | Response |
 | --- | --- |
